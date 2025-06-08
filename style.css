@@ -1,15 +1,17 @@
-/* TIPOGRAFIA MODERNA */
+/* TIPOGRAFIA MODERNA E ANIMAÇÃO NO FUNDO */
 body {
   font-family: 'Poppins', 'Inter', Arial, sans-serif;
   line-height: 1.7;
   letter-spacing: 0.01em;
   background-color: #181818;
+  animation: fadeIn 1.2s ease-in;
+  min-height: 100vh;
 }
 
 /* HEADER */
 .header {
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 1.5rem 3rem; /* Mais respiro */
+  padding: 1.5rem 3rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -243,6 +245,6 @@ body {
 
 /* Animação fadeIn */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(16px);}
-  to { opacity: 1; transform: none;}
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
