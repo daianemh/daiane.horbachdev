@@ -1,50 +1,24 @@
-body {
-  font-family: 'Poppins', 'Inter', Arial, sans-serif;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
-  min-height: 100vh;
-  background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212);
-  background-size: 400% 400%; /* Corrigido para permitir animação */
-  animation: gradientBG 20s ease-in-out infinite;
-  transition: background 0.9s;
-  position: relative;
-  overflow-x: hidden;
-  margin: 0; /* Certifique-se de remover margens do body */
-  padding: 0; /* E qualquer padding padrão */
-}
-/* Animação do fundo */
-@keyframes gradientBG {
-  0%   { background-position: 0% 50%; }
-  25%  { background-position: 50% 75%; }
-  50%  { background-position: 100% 50%; }
-  75%  { background-position: 50% 25%; }
-  100% { background-position: 0% 50%; }
-}
-
 .header {
-  background-color: rgba(0, 0, 0, 0.55); /* Menos opaco para ver o fundo */
-  padding: 0.7rem 1.2rem;
+  background: rgba(0, 0, 0, 0.45); /* Mais transparente */
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
   margin-top: 0;
-  backdrop-filter: blur(6px); /* Efeito vidro fosco */
-  -webkit-backdrop-filter: blur(6px);
+  padding: 0; /* Remove padding do header, deixa para navbar */
+  backdrop-filter: blur(4px); /* Vidro fosco */
 }
 
-
-/* Navbar SEM margem extra */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.7rem 1.2rem; /* Padding aqui, não no header */
   width: 100%;
   margin: 0;
 }
-
 /* Logo com efeito */
 .logo {
   font-size: 1.5rem;
