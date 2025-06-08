@@ -18,7 +18,7 @@ canvas#fundo {
   position: fixed;
   top: 1;
   left: 0;
-  z-index: -1;
+  z-index: -3;
   width: 100%;
   height: 100%;
 }
