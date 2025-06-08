@@ -1,19 +1,17 @@
 const canvas = document.getElementById("fundo");
 const ctx = canvas.getContext("2d");
 
-// Ajusta o tamanho do canvas para o tamanho da janela e escala para retina
 function resizeCanvas() {
   const dpr = window.devicePixelRatio || 1;
   canvas.width = window.innerWidth * dpr;
   canvas.height = window.innerHeight * dpr;
   canvas.style.width = window.innerWidth + "px";
   canvas.style.height = window.innerHeight + "px";
+  ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transform antes de escalar
   ctx.scale(dpr, dpr);
 }
 
 resizeCanvas();
-
-let particlesArray = [];
 
 class Particle {
   constructor() {
@@ -28,7 +26,6 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // Inverte a direção ao atingir as bordas da janela
     if (this.x < 0 || this.x > window.innerWidth) this.speedX *= -1;
     if (this.y < 0 || this.y > window.innerHeight) this.speedY *= -1;
   }
@@ -41,7 +38,9 @@ class Particle {
   }
 }
 
-function init() {
+let particlesArray = [];
+
+function initParticles() {
   particlesArray = [];
   const numParticles = 150;
   for (let i = 0; i < numParticles; i++) {
@@ -50,25 +49,20 @@ function init() {
 }
 
 function animate() {
-  // Limpa o canvas inteiro
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Atualiza e desenha cada partícula
-  for (let particle of particlesArray) {
-    particle.update();
-    particle.draw();
+  for (const p of particlesArray) {
+    p.update();
+    p.draw();
   }
-
   requestAnimationFrame(animate);
 }
 
-// Reajusta o canvas e reinicia as partículas ao redimensionar a janela
 window.addEventListener("resize", () => {
   resizeCanvas();
-  init();
+  initParticles();
 });
 
-// Inicializa e começa a animação
-init();
+initParticles();
 animate();
+
 
