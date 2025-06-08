@@ -260,3 +260,64 @@ canvas#fundo {
     font-size: 1.2rem;
   }
 }
+
+/* Seção Sobre */
+.sobre-pagina {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.sobre-pagina h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #FA8072;
+  margin-bottom: 40px;
+}
+
+.conteudo-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.foto-sobre {
+  width: 180px; /* Redução do tamanho da imagem */
+  border: 5px solid #ffffff;
+  transition: transform 0.3s ease; /* Suave animação */
+}
+
+.foto-sobre:hover {
+  transform: scale(1.05);
+}
+
+.texto-sobre {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.texto-sobre p {
+  margin-bottom: 20px;
+}
+
+/* Melhor responsividade */
+@media (max-width: 768px) {
+  .conteudo-sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-sobre {
+    width: 150px; /* Ajuste para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .foto-sobre {
+    width: 120px; /* Ajuste adicional para telas muito pequenas */
+  }
+}
