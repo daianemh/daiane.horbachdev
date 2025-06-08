@@ -16,7 +16,7 @@ body, html {
 
 canvas#fundo {
   position: fixed;
-  top: 0;
+  top: 1;
   left: 0;
   z-index: -1;
   width: 100%;
