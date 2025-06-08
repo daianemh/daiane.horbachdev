@@ -1,11 +1,21 @@
-/* TIPOGRAFIA MODERNA E ANIMAÇÃO NO FUNDO */
+/* FONTE E BASE */
 body {
   font-family: 'Poppins', 'Inter', Arial, sans-serif;
   line-height: 1.7;
   letter-spacing: 0.01em;
-  background-color: #181818;
-  animation: fadeIn 1.2s ease-in;
+  background: linear-gradient(-45deg, #181818, #232526, #FA8072, #121212, #FF6347);
+  background-size: 400% 400%;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  animation: gradientBG 12s ease-in-out infinite;
+}
+
+/* Animação do fundo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* HEADER */
@@ -87,7 +97,6 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .hero h2 {
@@ -133,7 +142,6 @@ body {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: 3rem auto 2rem auto;
-  animation: fadeIn 1s ease-in-out;
   background: rgba(30, 30, 30, 0.80);
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.13);
@@ -143,7 +151,7 @@ body {
 .projetos {
   padding: 100px 20px 80px 20px;
   text-align: center;
-  background-color: #121212;
+  background-color: #121212cc;
   color: white;
   min-height: 100vh;
   box-shadow: 0 2px 16px rgba(0,0,0,0.16);
@@ -165,6 +173,8 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   border: 1px solid rgba(250,128,114,0.07);
+  position: relative;
+  padding-bottom: 48px; /* espaço para o botão fixo */
 }
 
 .card:hover {
@@ -172,10 +182,31 @@ body {
   box-shadow: 0 16px 32px rgba(250,128,114,0.11);
 }
 
+/* Botão GitHub persistente */
+.github-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: #FA8072;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(250, 128, 114, 0.5);
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.github-btn:hover {
+  background-color: #ff6347;
+  box-shadow: 0 5px 15px rgba(255, 99, 71, 0.7);
+}
+
 /* Seção Sobre */
 .sobre-pagina {
   padding: 60px 20px;
-  background-color: #111;
+  background-color: #111c;
   color: #fff;
   border-top: 2px solid #FA8072;
   border-radius: 18px;
@@ -229,6 +260,10 @@ body {
   .content, .sobre-pagina {
     padding: 2rem 1rem;
   }
+  .cards-container {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -243,8 +278,22 @@ body {
   }
 }
 
-/* Animação fadeIn */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Rodapé personalizado */
+footer {
+  background-color: #121212;
+  color: #FA8072;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  border-top: 2px solid #FA8072;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 10px rgba(250, 128, 114, 0.3);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
 }
