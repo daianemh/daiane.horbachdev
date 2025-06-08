@@ -3,8 +3,8 @@ body {
   line-height: 1.7;
   letter-spacing: 0.01em;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #181818, #232526, #FA8072, #121212, #FF6347);
-  background-size: 300% 300%;
+  background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212, #FF6347);
+  background-size: 100% 100%;
   animation: gradientBG 18s ease-in-out infinite;
   transition: background 0.7s;
   /* z-index removido, não é necessário aqui */
