@@ -13,6 +13,18 @@ body {
   margin: 0;
   padding: 0;
 }
+#fundo {
+  position: fixed;       /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* ocupa toda a largura */
+  height: 100vh;         /* ocupa toda a altura */
+  z-index: 0;            /* atrás de tudo */
+  pointer-events: none;  /* deixa eventos de mouse passarem */
+  background: transparent;
+  display: block;
+}
+
 /* HEADER MENOR E MENU NO TOPO */
 .header {
   background-color: rgba(0, 0, 0, 0.88);
