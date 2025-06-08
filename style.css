@@ -4,13 +4,14 @@ body {
   letter-spacing: 0.01em;
   min-height: 100vh;
   background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212);
-  background-size: 100% 100%;
+  background-size: 400% 400%; /* Corrigido para permitir animação */
   animation: gradientBG 20s ease-in-out infinite;
   transition: background 0.9s;
   position: relative;
   overflow-x: hidden;
+  margin: 0; /* Certifique-se de remover margens do body */
+  padding: 0; /* E qualquer padding padrão */
 }
-
 /* Animação do fundo */
 @keyframes gradientBG {
   0%   { background-position: 0% 50%; }
