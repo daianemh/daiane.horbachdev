@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  position: relative;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* Animação Fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Cabeçalho aprimorado */
 .header {
   background-color: rgba(0, 0, 0, 0.85);
@@ -32,7 +48,10 @@
 
 .logo:hover {
   transform: scale(1.1);
-  color Melhorias nos links do menu */
+  color: #ff6347;
+}
+
+/* Melhorias nos links do menu */
 .nav-links {
   list-style: none;
   display: flex;
@@ -64,74 +83,6 @@
     flex-direction: column;
     gap: 1rem;
   }
-}
-body, html {
-  height: 100%;
-  font-family: "Segoe UI", sans-serif;
-  color: #fff;
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-  position: relative;
-  z-index: 0;
-  transition: background 0.3s ease;
-}
-
-/* Animação Fade-in */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-canvas#fundo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  width: 100%;
-  height: 100%;
-}
-
-/* Cabeçalho */
-.header {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #FA8072;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #FA8072;
 }
 
 /* Hero Section */
@@ -189,23 +140,6 @@ canvas#fundo {
   animation: fadeIn 1s ease-in-out;
 }
 
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.content h3 {
-  margin-top: 1.5rem;
-  font-size: 1.3rem;
-  color: #FA8072;
-}
-
-.content p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: #ccc;
-}
-
 /* Projetos */
 .projetos {
   padding: 80px 20px;
@@ -237,90 +171,6 @@ canvas#fundo {
   box-shadow: 0 10px 20px rgba(180, 70, 88, 0.4);
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  margin: 15px 0 5px;
-  font-size: 20px;
-}
-
-.card p {
-  font-size: 14px;
-  padding: 0 15px;
-  color: #ccc;
-}
-
-.card a {
-  display: inline-block;
-  margin: 15px;
-  padding: 10px 15px;
-  background: linear-gradient(to right, #FA8072, #FF6347);
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.card a:hover {
-  background: linear-gradient(to right, #FF6347, #FA8072);
-}
-
-/* Responsividade aprimorada */
-@media (max-width: 1024px) {
-  .cards-container {
-    gap: 20px;
-  }
-
-  .card {
-    width: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 90%;
-  }
-
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .projetos {
-    padding: 60px 10px;
-  }
-
-  .card h3 {
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 13px;
-  }
-
-  .card a {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero .typewriter {
-    font-size: 1.2rem;
-  }
-}
-
 /* Seção Sobre */
 .sobre-pagina {
   padding: 60px 20px;
@@ -345,9 +195,9 @@ canvas#fundo {
 }
 
 .foto-sobre {
-  width: 180px; /* Redução do tamanho da imagem */
+  width: 180px;
   border: 5px solid #ffffff;
-  transition: transform 0.3s ease; /* Suave animação */
+  transition: transform 0.3s ease;
 }
 
 .foto-sobre:hover {
@@ -360,11 +210,7 @@ canvas#fundo {
   line-height: 1.6;
 }
 
-.texto-sobre p {
-  margin-bottom: 20px;
-}
-
-/* Melhor responsividade */
+/* Responsividade aprimorada */
 @media (max-width: 768px) {
   .conteudo-sobre {
     flex-direction: column;
@@ -372,12 +218,12 @@ canvas#fundo {
   }
 
   .foto-sobre {
-    width: 150px; /* Ajuste para telas menores */
+    width: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .foto-sobre {
-    width: 120px; /* Ajuste adicional para telas muito pequenas */
+    width: 120px;
   }
 }
