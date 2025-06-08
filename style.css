@@ -10,7 +10,7 @@ body {
   position: relative;
   overflow-x: hidden;
   margin: 0; /* Certifique-se de remover margens do body */
-  padding: 0; /* E qualquer padding padrão */
+  padding: 10; /* E qualquer padding padrão */
 }
 /* Animação do fundo */
 @keyframes gradientBG {
