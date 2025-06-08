@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', 'Inter', Arial, sans-serif;
   line-height: 1.7;
   letter-spacing: 0.01em;
-  min-height: 500vh;
+  min-height: 100vh;
   background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212);
   background-size: 400% 400%; /* Corrigido para permitir animação */
   animation: gradientBG 20s ease-in-out infinite;
@@ -21,18 +21,20 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* HEADER MENOR E MENU NO TOPO */
 .header {
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(0, 0, 0, 0.55); /* Menos opaco para ver o fundo */
   padding: 0.7rem 1.2rem;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
   margin-top: 0;
+  backdrop-filter: blur(6px); /* Efeito vidro fosco */
+  -webkit-backdrop-filter: blur(6px);
 }
+
 
 /* Navbar SEM margem extra */
 .navbar {
