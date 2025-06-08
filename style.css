@@ -89,7 +89,7 @@ canvas#fundo {
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
