@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', 'Inter', Arial, sans-serif;
   line-height: 1.7;
   letter-spacing: 0.01em;
-  min-height: 100vh;
+  min-height: 500vh;
   background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212);
   background-size: 400% 400%; /* Corrigido para permitir animação */
   animation: gradientBG 20s ease-in-out infinite;
@@ -10,7 +10,7 @@ body {
   position: relative;
   overflow-x: hidden;
   margin: 0; /* Certifique-se de remover margens do body */
-  padding: 10; /* E qualquer padding padrão */
+  padding: 0; /* E qualquer padding padrão */
 }
 /* Animação do fundo */
 @keyframes gradientBG {
