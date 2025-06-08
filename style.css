@@ -8,7 +8,7 @@
   border-bottom-right-radius: 13px;
   margin-top: 0;
   padding: 0; /* Remove padding do header, deixa para navbar */
-  backdrop-filter: blur(5px); /* Vidro fosco */
+  backdrop-filter: blur(2px); /* Vidro fosco */
 }
 
 .navbar {
