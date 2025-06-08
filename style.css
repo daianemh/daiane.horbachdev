@@ -1,20 +1,23 @@
-/* FONTE E BASE */
 body {
   font-family: 'Poppins', 'Inter', Arial, sans-serif;
   line-height: 1.7;
   letter-spacing: 0.01em;
+  min-height: 100vh;
   background: linear-gradient(-45deg, #181818, #232526, #FA8072, #121212, #FF6347);
-  background-size: 400% 400%;
-  min-height: 60vh;
+  background-size: 300% 300%;
+  animation: gradientBG 18s ease-in-out infinite;
+  transition: background 0.7s;
+  /* z-index removido, não é necessário aqui */
   position: relative;
-  z-index: 1;
-  animation: gradientBG 12s ease-in-out infinite;
+  overflow-x: hidden;
 }
 
 /* Animação do fundo */
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 75%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 25%; }
   100% { background-position: 0% 50%; }
 }
 
