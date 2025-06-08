@@ -85,7 +85,7 @@ canvas#fundo {
 }
 
 .btn {
-  background-color: #a3618a;
+  background-color: #FA8072;
   color: #fff;
   padding: 1.0rem 1.5rem;
   border: none;
@@ -96,7 +96,7 @@ canvas#fundo {
 }
 
 .btn:hover {
-  background-color: #a3618a;
+  background-color: #FA8072;
 }
 
 /* Conteúdo */
@@ -190,7 +190,7 @@ footer {
 }
 
 .card a:hover {
-  background-color: #a3618a;
+  background-color: #FA8072;
 }
 /* Responsividade total */
 
