@@ -3,11 +3,10 @@ body {
   line-height: 1.7;
   letter-spacing: 0.01em;
   min-height: 100vh;
-  background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212, #FF6347);
+  background: linear-gradient(-25deg, #181818, #232526, #FA8072, #121212);
   background-size: 100% 100%;
-  animation: gradientBG 18s ease-in-out infinite;
-  transition: background 0.7s;
-  /* z-index removido, não é necessário aqui */
+  animation: gradientBG 20s ease-in-out infinite;
+  transition: background 0.9s;
   position: relative;
   overflow-x: hidden;
 }
@@ -130,7 +129,7 @@ body {
   color: #fff;
   padding: 1rem 1.5rem;
   border: none;
-  border-radius: 16px;
+  border-radius: 19px;
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 3px 14px rgba(255, 99, 71, 0.14);
