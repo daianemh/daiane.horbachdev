@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<body>
-  <header class="header">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daiane Tech - Contato</title>
@@ -9,29 +8,40 @@
 </head>
 <body>
   <canvas id="fundo"></canvas>
-
   <header class="header">
     <nav>
       <h1 class="logo">Daiane Horbach</h1>
-       <header class="header">
-    <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">sobre mim</a></li>
+        <li><a href="sobre.html">Sobre mim</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
   <main>
-  <section class="content">
+    <section class="content">
       <h2>Fale comigo</h2>
-      <p>Email: daiane.horbachdev@gmail.com</p>
-      <p>LinkedIn: http://linkedin.com/in/daianehorbach</p>
-      <p>GitHub: http://github.com/daianehorbach</p>
+      <form action="mailto:daiane.horbachdev@gmail.com" method="post" enctype="text/plain">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+      <hr>
+      <p>Email direto: <a href="mailto:daiane.horbachdev@gmail.com">daiane.horbachdev@gmail.com</a></p>
+      <p>LinkedIn: <a href="http://linkedin.com/in/daianehorbach" target="_blank">/daianehorbach</a></p>
+      <p>GitHub: <a href="http://github.com/daianehorbach" target="_blank">/daianehorbach</a></p>
     </section>
   </main>
- <footer>
-    <p>© 2025 Daiane Horbach. direitos reservados</p>
+  <footer>
+    <p>© 2025 Daiane Horbach. Direitos reservados.</p>
     <p>Desenvolvido com amor e dedicação.</p>
   </footer>
   <script src="script.js"></script>
